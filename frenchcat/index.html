@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRENCH CAT | Security Concept</title>
+  <meta name="description" content="A visual security-studio concept exploring clear monitoring, practical analysis, and defensive digital protection.">
+  <meta name="theme-color" content="#050607">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; upgrade-insecure-requests">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FRENCH CAT | Security Concept">
+  <meta property="og:description" content="A visual security-studio concept exploring clear monitoring, practical analysis, and defensive digital protection.">
+  <meta property="og:image" content="./assets/logo.png">
+  <meta property="og:image:alt" content="French Cat logo">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/png" href="./assets/logo.png">
+  <link rel="apple-touch-icon" href="./assets/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.intro{display:none!important}</style></noscript>
+</head>
+<body>
+
+  <a class="skip-link" href="#home" data-testid="skip-link">Skip to content</a>
+
+  <!-- ambient layers -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <!-- ============ CINEMATIC INTRO ============ -->
+  <div class="intro" id="intro" data-testid="intro-overlay" role="dialog" aria-label="French Cat introduction">
+    <video class="intro-video" id="intro-video" src="./assets/intro.mp4" muted autoplay playsinline preload="auto"></video>
+    <div class="intro-fallback" id="intro-fallback" hidden>
+      <img src="./assets/logo.png" alt="French Cat logo" class="intro-fallback-logo">
+      <p class="intro-fallback-tag">PROTECTED BY FRENCH CAT</p>
+    </div>
+    <div class="intro-loader" id="intro-loader" aria-hidden="true">
+      <span class="intro-loader-brand">FRENCH CAT</span>
+      <span class="intro-loader-bar"><span></span></span>
+    </div>
+    <div class="intro-vignette" aria-hidden="true"></div>
+  </div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav-brand" data-testid="nav-brand">
+      <img src="./assets/logo.png" alt="French Cat logo" class="nav-logo">
+      <span class="nav-wordmark">FRENCH CAT</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home" class="nav-link is-active" data-testid="nav-link-home">Home</a>
+      <a href="#philosophy" class="nav-link" data-testid="nav-link-philosophy">Philosophy</a>
+      <a href="#capabilities" class="nav-link" data-testid="nav-link-capabilities">Capabilities</a>
+      <a href="#intelligence" class="nav-link" data-testid="nav-link-intelligence">Intelligence</a>
+      <a href="#environment" class="nav-link" data-testid="nav-link-environment">Environment</a>
+      <a href="#founder" class="nav-link" data-testid="nav-link-founder">Founder</a>
+    </nav>
+    <div class="nav-side">
+      <span class="status-badge" data-testid="nav-status-badge"><span class="dot dot-red"></span>COMING SOON</span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-testid="nav-toggle-button">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-testid="mobile-menu">
+    <nav class="mobile-links" aria-label="Mobile">
+      <a href="#home" class="mobile-link" data-testid="mobile-link-home">Home</a>
+      <a href="#philosophy" class="mobile-link" data-testid="mobile-link-philosophy">Philosophy</a>
+      <a href="#capabilities" class="mobile-link" data-testid="mobile-link-capabilities">Capabilities</a>
+      <a href="#intelligence" class="mobile-link" data-testid="mobile-link-intelligence">Intelligence</a>
+      <a href="#environment" class="mobile-link" data-testid="mobile-link-environment">Environment</a>
+      <a href="#founder" class="mobile-link" data-testid="mobile-link-founder">Founder</a>
+    </nav>
+    <p class="mobile-menu-foot">PROTECTED BY FRENCH CAT</p>
+  </div>
+
+  <main>
+
+    <!-- ============ 01 HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid" data-parallax="0.1"></div>
+        <canvas class="hero-particles" id="particles"></canvas>
+        <div class="hero-scan" data-parallax="0.04"></div>
+        <div class="hero-glow" data-parallax="0.18"></div>
+      </div>
+      <div class="hero-inner">
+        <p class="hero-pill"><span class="dot dot-red"></span>INDEPENDENT SECURITY CONCEPT</p>
+        <div class="hero-mark" data-tilt="5">
+          <div class="hero-ring" aria-hidden="true"></div>
+          <div class="hero-ring hero-ring-2" aria-hidden="true"></div>
+          <img src="./assets/logo.png" alt="French Cat logo" class="hero-logo" data-testid="hero-logo">
+        </div>
+        <h1 class="hero-title">
+          <span class="hl"><span class="hl-inner">CALM DESIGN.</span></span>
+          <span class="hl"><span class="hl-inner">CLEAR SIGNAL.</span></span>
+          <span class="hl"><span class="hl-inner">SAFER SYSTEMS.</span></span>
+        </h1>
+        <p class="hero-lede">A visual study for a thoughtful security studio: clear monitoring, practical analysis, and digital protection people can understand. This is a concept, not a released product.</p>
+        <div class="cta-row">
+          <a href="#philosophy" class="btn btn-primary" data-testid="hero-explore-button">EXPLORE THE SYSTEM</a>
+          <a href="#environment" class="btn btn-ghost" data-testid="hero-status-button">DEVELOPMENT STATUS</a>
+        </div>
+        <div class="hero-status">
+          <span class="hero-status-line"><span class="dot dot-red"></span>COMING SOON</span>
+          <span class="hero-status-sub">PRIVATE DEVELOPMENT ENVIRONMENT</span>
+        </div>
+      </div>
+      <p class="hero-foot">PROTECTED BY FRENCH CAT</p>
+    </section>
+
+    <!-- editorial marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-seq">
+          <span class="marquee-item">PROTECTED BY FRENCH CAT</span><span class="marquee-dot"></span>
+          <span class="marquee-item">DEFENSIVE SECURITY DESIGN</span><span class="marquee-dot"></span>
+          <span class="marquee-item">INTELLIGENCE THAT NEVER STOPS GUARDING</span><span class="marquee-dot"></span>
+          <span class="marquee-item">PRIVATE DEVELOPMENT ENVIRONMENT</span><span class="marquee-dot"></span>
+          <span class="marquee-item">COMING SOON</span><span class="marquee-dot"></span>
+        </div>
+        <div class="marquee-seq">
+          <span class="marquee-item">PROTECTED BY FRENCH CAT</span><span class="marquee-dot"></span>
+          <span class="marquee-item">DEFENSIVE SECURITY DESIGN</span><span class="marquee-dot"></span>
+          <span class="marquee-item">INTELLIGENCE THAT NEVER STOPS GUARDING</span><span class="marquee-dot"></span>
+          <span class="marquee-item">PRIVATE DEVELOPMENT ENVIRONMENT</span><span class="marquee-dot"></span>
+          <span class="marquee-item">COMING SOON</span><span class="marquee-dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 02 PHILOSOPHY ============ -->
+    <section class="section" id="philosophy">
+      <div class="section-inner">
+        <p class="section-label" data-reveal><span class="label-rule"></span>01 / OUR PHILOSOPHY</p>
+        <h2 class="section-title" data-reveal style="--d:.08s">SECURITY IS NOT JUST DEFENCE.<br><span class="title-accent">IT IS INTELLIGENCE.</span></h2>
+        <p class="section-lede" data-reveal style="--d:.16s">Good protection should help people make sense of what is happening. French Cat explores clear explanations, useful signals, and security decisions that do not require a specialist to understand.</p>
+        <div class="phil-grid">
+          <article class="glass-card card-bevel phil-card" data-reveal style="--d:0s">
+            <p class="card-index">CARD 01</p>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <h3>INTELLIGENT AWARENESS</h3>
+            <p>Designed to analyze relevant system activity and help identify unusual behaviour.</p>
+          </article>
+          <article class="glass-card card-bevel phil-card" data-reveal style="--d:.12s">
+            <p class="card-index">CARD 02</p>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 19 6.5v5c0 4.6-3 7.6-7 9-4-1.4-7-4.4-7-9v-5Z"/><path d="m9 11.5 2 2 4-4"/></svg>
+            </span>
+            <h3>ADAPTIVE DEFENCE</h3>
+            <p>An evolving approach to security that aims to respond intelligently to emerging threats.</p>
+          </article>
+          <article class="glass-card card-bevel phil-card" data-reveal style="--d:.24s">
+            <p class="card-index">CARD 03</p>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12l5.5-5.5"/></svg>
+            </span>
+            <h3>CONTINUOUS VIGILANCE</h3>
+            <p>A security philosophy built around persistent monitoring, awareness, and protection.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 CAPABILITIES ============ -->
+    <section class="section section-alt" id="capabilities">
+      <div class="section-inner">
+        <p class="section-label" data-reveal><span class="label-rule"></span>02 / SECURITY CAPABILITIES</p>
+        <h2 class="section-title" data-reveal style="--d:.08s">BUILT FOR THE UNEXPECTED.</h2>
+        <p class="section-lede" data-reveal style="--d:.16s">A developing set of defensive security capabilities, engineered around one principle — intelligence before reaction.</p>
+        <p class="cap-note" data-reveal style="--d:.22s"><span class="dot dot-red dot-sm"></span>PLANNED CAPABILITIES — IN DEVELOPMENT, NOT YET AVAILABLE TO THE PUBLIC</p>
+        <div class="cap-grid">
+          <article class="glass-card" data-reveal style="--d:0s">
+            <div class="card-top"><p class="card-index">01</p><span class="card-tag"><span class="dot dot-red dot-xs"></span>IN DEVELOPMENT</span></div>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7.5"/><path d="M12 2.5V7M12 17v4.5M2.5 12H7M17 12h4.5"/></svg>
+            </span>
+            <h3>THREAT ANALYSIS</h3>
+            <p>A design concept for spotting unusual activity and helping people understand what may need a closer look.</p>
+          </article>
+          <article class="glass-card" data-reveal style="--d:.08s">
+            <div class="card-top"><p class="card-index">02</p><span class="card-tag"><span class="dot dot-red dot-xs"></span>IN DEVELOPMENT</span></div>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="13" rx="2"/><path d="M6.5 11.5 9 9l2.5 3 3-4.5 2.5 4"/></svg>
+            </span>
+            <h3>INTELLIGENT MONITORING</h3>
+            <p>Continuous visibility into authorized and monitored system environments.</p>
+          </article>
+          <article class="glass-card" data-reveal style="--d:.16s">
+            <div class="card-top"><p class="card-index">03</p><span class="card-tag"><span class="dot dot-red dot-xs"></span>IN DEVELOPMENT</span></div>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c3 0 3-6 6-6s3 6 6 6 3-6 6-6"/></svg>
+            </span>
+            <h3>ANOMALY DETECTION</h3>
+            <p>Identify unusual activity patterns and highlight events requiring attention.</p>
+          </article>
+          <article class="glass-card" data-reveal style="--d:0s">
+            <div class="card-top"><p class="card-index">04</p><span class="card-tag"><span class="dot dot-red dot-xs"></span>IN DEVELOPMENT</span></div>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 19 6.5v5c0 4.6-3 7.6-7 9-4-1.4-7-4.4-7-9v-5Z"/><rect x="9.5" y="10.5" width="5" height="4.5" rx="1"/><path d="M10.5 10.5v-1a1.5 1.5 0 0 1 3 0v1"/></svg>
+            </span>
+            <h3>SYSTEM INTEGRITY</h3>
+            <p>Focus on protecting system integrity and recognizing suspicious changes.</p>
+          </article>
+          <article class="glass-card" data-reveal style="--d:.08s">
+            <div class="card-top"><p class="card-index">05</p><span class="card-tag"><span class="dot dot-red dot-xs"></span>IN DEVELOPMENT</span></div>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/></svg>
+            </span>
+            <h3>SECURITY AUTOMATION</h3>
+            <p>A developing approach to helping automate selected defensive security operations.</p>
+          </article>
+          <article class="glass-card" data-reveal style="--d:.16s">
+            <div class="card-top"><p class="card-index">06</p><span class="card-tag"><span class="dot dot-red dot-xs"></span>IN DEVELOPMENT</span></div>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2.5h-15Z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+            </span>
+            <h3>INTELLIGENT ALERTS</h3>
+            <p>Clear, contextual security notifications designed to make important events easier to understand.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 SECURITY DESIGN STUDY ============ -->
+    <section class="section" id="intelligence">
+      <div class="section-inner intel-layout">
+        <div class="intel-copy">
+          <p class="section-label" data-reveal><span class="label-rule"></span>03 / THE INTELLIGENCE CORE</p>
+          <h2 class="section-title" data-reveal style="--d:.08s">A DIFFERENT KIND OF INTELLIGENCE.</h2>
+          <p class="section-lede" data-reveal style="--d:.16s">This visual study asks a simple question: how can a security interface make unusual activity easier to notice and the next step easier to understand? Nothing here connects to a live system.</p>
+          <p class="intel-caption" data-reveal style="--d:.24s">ILLUSTRATIVE VISUALIZATION — DECORATIVE REPRESENTATION, NOT A LIVE SYSTEM</p>
+        </div>
+        <div class="core-stage" data-tilt="6" data-reveal style="--d:.1s">
+          <div class="ai-core" aria-hidden="true">
+            <svg class="core-rings" viewBox="0 0 200 200">
+              <circle class="ring ring-a" cx="100" cy="100" r="92" fill="none"/>
+              <circle class="ring ring-b" cx="100" cy="100" r="74" fill="none"/>
+              <circle class="ring ring-c" cx="100" cy="100" r="56" fill="none"/>
+            </svg>
+            <div class="core-grid"></div>
+            <div class="core-scan"></div>
+            <div class="core-halo"></div>
+            <div class="core-center"></div>
+          </div>
+          <span class="core-label core-label-1">THREAT ANALYSIS</span>
+          <span class="core-label core-label-2">BEHAVIOUR MONITORING</span>
+          <span class="core-label core-label-3">ANOMALY DETECTION</span>
+          <span class="core-label core-label-4">DEFENSIVE INTELLIGENCE</span>
+          <span class="core-chip core-chip-1">CORE · ILLUSTRATIVE</span>
+          <span class="core-chip core-chip-2">SCAN · VISUAL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 PRIVATE TEST ENVIRONMENT ============ -->
+    <section class="section" id="environment">
+      <div class="section-inner center">
+        <p class="section-label label-center" data-reveal><span class="label-rule"></span>04 / RESTRICTED ENVIRONMENT<span class="label-rule label-rule-r"></span></p>
+        <h2 class="section-title" data-reveal style="--d:.08s">NOT OPEN TO EVERYONE.<br><span class="title-accent">NOT READY FOR THE PUBLIC.</span></h2>
+        <p class="section-lede lede-center" data-reveal style="--d:.16s">French Cat is a portfolio concept, not a security product. It does not scan devices, monitor networks, or protect visitors.</p>
+        <div class="glass-card env-panel" data-reveal style="--d:.1s" data-testid="environment-panel">
+          <div class="env-head">
+            <img src="./assets/logo.png" alt="French Cat logo" class="env-logo">
+            <div class="env-head-text">
+              <p class="env-name">FRENCH CAT</p>
+              <p class="env-sub">PRIVATE DEVELOPMENT ENVIRONMENT</p>
+            </div>
+            <span class="env-indicator"><span class="dot dot-red dot-lg"></span></span>
+          </div>
+          <p class="env-divider">&lt; SYSTEM STATUS &gt;</p>
+          <ul class="env-rows">
+            <li><span class="env-key">DEVELOPMENT</span><span class="env-val"><span class="dot dot-soft"></span>IN PROGRESS</span></li>
+            <li><span class="env-key">PUBLIC ACCESS</span><span class="env-val env-val-warn"><span class="dot dot-red"></span>RESTRICTED</span></li>
+            <li><span class="env-key">TEST ENVIRONMENT</span><span class="env-val"><span class="dot dot-idle"></span>AUTHORIZED SYSTEMS ONLY</span></li>
+            <li><span class="env-key">DEPLOYMENT</span><span class="env-val env-val-warn"><span class="dot dot-red"></span>NOT AVAILABLE</span></li>
+          </ul>
+          <p class="env-note">All displayed status indicators are informational website labels, not connected to live infrastructure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 FOUNDER ============ -->
+    <section class="section" id="founder">
+      <div class="section-inner center">
+        <p class="section-label label-center" data-reveal><span class="label-rule"></span>05 / THE FOUNDER<span class="label-rule label-rule-r"></span></p>
+        <h2 class="section-title" data-reveal style="--d:.08s">THE MIND BEHIND FRENCH CAT.</h2>
+        <div class="glass-card founder-panel" data-reveal style="--d:.12s" data-testid="founder-panel">
+          <img src="./assets/logo.png" alt="French Cat logo" class="founder-logo">
+          <p class="founder-kicker">FOUNDER &amp; CREATOR OF FRENCH CAT</p>
+          <h3 class="founder-name">SOUHARDYA<br>KARMAKAR</h3>
+          <div class="silver-rule" aria-hidden="true"></div>
+          <p class="founder-desc">Created by Souhardya Karmakar, French Cat is a visual exploration of security design, systems thinking, and clearer ways to explain digital protection.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 COMING SOON / FINAL CTA ============ -->
+    <section class="finale" id="coming-soon">
+      <div class="finale-glow" aria-hidden="true"></div>
+      <img src="./assets/logo.png" alt="French Cat logo" class="finale-logo" data-reveal data-testid="finale-logo">
+      <h2 class="finale-title" data-reveal style="--d:.08s">BETTER DIGITAL PROTECTION<br>STARTS WITH<br><span class="title-accent">A CLEARER SIGNAL.</span></h2>
+      <p class="finale-lede" data-reveal style="--d:.16s">French Cat is a design concept about making digital security feel more understandable, more useful, and a little less intimidating.</p>
+      <p class="finale-soon" data-reveal style="--d:.2s">A PORTFOLIO CONCEPT</p>
+      <p class="finale-sub" data-reveal style="--d:.26s">NO LIVE SCANNING<br>NO SECURITY SERVICE</p>
+      <button class="btn btn-ghost btn-stay" id="stay-btn" data-testid="stay-tuned-button" aria-expanded="false" data-reveal style="--d:.32s">STAY TUNED</button>
+      <p class="stay-note" id="stay-note" data-testid="stay-tuned-note" hidden>NOTED — FRENCH CAT IS IN PRIVATE DEVELOPMENT. RETURN HERE FOR OFFICIAL UPDATES.</p>
+      <p class="finale-protect">PROTECTED BY FRENCH CAT</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p class="footer-name">FRENCH CAT</p>
+        <p class="footer-tag">SECURITY DESIGN CONCEPT</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-k">FOUNDER</p>
+        <p class="footer-v">SOUHARDYA KARMAKAR</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-k">STATUS</p>
+        <p class="footer-v"><span class="dot dot-red"></span>UNDER DEVELOPMENT</p>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 FRENCH CAT. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

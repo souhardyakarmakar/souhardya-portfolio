@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07070a">
+    <meta name="description" content="Watch a short introduction to Souhardya Karmakar’s portfolio and work.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; form-action 'none'; script-src 'none'; style-src 'unsafe-inline'; media-src 'self'; img-src 'self'; object-src 'none'">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Video preview — Souhardya Karmakar">
+    <meta property="og:description" content="Watch a short introduction to Souhardya Karmakar’s portfolio and work.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:image:alt" content="Souhardya Karmakar portfolio mark">
+    <title>Portfolio introduction — Souhardya Karmakar</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <style>
+        * { box-sizing: border-box; }
+        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
+        html, body { width: 100%; min-height: 100%; margin: 0; background: #07070a; }
+        body { min-height: 100vh; overflow: hidden; }
+        .video-stage { position: fixed; inset: 0; background: #07070a; }
+        .video-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #07070a; }
+        .back-link {
+            position: fixed;
+            z-index: 2;
+            top: max(18px, env(safe-area-inset-top));
+            left: max(18px, env(safe-area-inset-left));
+            display: inline-flex;
+            min-height: 44px;
+            align-items: center;
+            padding: 0 16px;
+            border: 1px solid #ffffff70;
+            border-radius: 999px;
+            background: #09090dcc;
+            color: #fff;
+            font: 700 .76rem/1 system-ui, sans-serif;
+            letter-spacing: .1em;
+            text-decoration: none;
+            backdrop-filter: blur(12px);
+        }
+        .back-link:focus-visible { outline: 2px solid #ff8fd8; outline-offset: 3px; }
+    </style>
+</head>
+<body>
+    <main class="video-stage">
+        <h1 class="visually-hidden">Portfolio introduction</h1>
+        <video autoplay muted playsinline preload="auto" poster="assets/black.jpg" aria-label="Introduction to Souhardya Karmakar’s portfolio">
+            <source src="assets/404.mp4" type="video/mp4">
+        </video>
+        <a class="back-link" href="index.html">Back to the portfolio</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Souhardya Karmakar.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects — Souhardya Karmakar">
+    <meta property="og:description" content="Explore selected web development work and interactive website concepts by Souhardya Karmakar.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:image:alt" content="Souhardya Karmakar portfolio mark">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#09060c">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'none'; base-uri 'self'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; upgrade-insecure-requests"
+    >
+    <title>Projects — Souhardya Karmakar</title>
+    <script src="consent-bootstrap.js?v=3"></script>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="collection-pages.css?v=4">
+    <link rel="stylesheet" href="consent.css?v=7">
+</head>
+<body class="consent-locked" data-collection="projects">
+    <div class="collection-backdrop" aria-hidden="true"></div>
+    <div class="collection-film-grain" aria-hidden="true"></div>
+    <header class="collection-header">
+        <a class="collection-brand" href="index.html" aria-label="Souhardya Karmakar portfolio home">
+            <span class="brand-mark">SK</span>
+            <span>SOUHARDYA KARMAKAR</span>
+        </a>
+        <div class="collection-system" aria-label="Portfolio archive status">
+            <span class="system-dot" aria-hidden="true"></span>
+            <span>ARCHIVE MODE</span>
+            <strong>ONLINE</strong>
+        </div>
+        <nav class="collection-nav" aria-label="Portfolio pages">
+            <a href="index.html">HOME</a>
+            <a href="projects.html" aria-current="page">PROJECTS</a>
+            <a href="certificates.html">CERTIFICATES</a>
+        </nav>
+    </header>
+
+    <main class="collection-main">
+        <p class="collection-kicker">PORTFOLIO / 03 <span>MISSION ARCHIVE</span></p>
+        <h1>PROJECT <span>ARCHIVE</span></h1>
+        <p class="collection-intro">
+            Selected web development and social media projects. New work can be added to this collection over time.
+        </p>
+        <div class="collection-counter" aria-live="polite">
+            <span class="counter-mark" aria-hidden="true">▰</span>
+            <span id="collectionCount">00 PROJECTS</span>
+            <span class="counter-line" aria-hidden="true"></span>
+            <span>DATABASE READY</span>
+        </div>
+        <section
+            class="collection-grid"
+            id="collectionGrid"
+            aria-label="Projects"
+            aria-live="polite"
+        ></section>
+    </main>
+
+    <footer class="collection-footer">
+        <span>KOLKATA, INDIA</span>
+        <a href="index.html">← BACK TO PORTFOLIO</a>
+        <a class="collection-terms-link" href="Terms&amp;Conditions.pdf" target="_blank" rel="noopener noreferrer" type="application/pdf">TERMS &amp; CONDITIONS</a>
+    </footer>
+
+    <section
+        class="consent-layer"
+        id="consentGate"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="consentTitle"
+        aria-describedby="consentDescription"
+    >
+        <div class="consent-card">
+            <span class="consent-kicker">PORTFOLIO ACCESS / TERMS</span>
+            <h2 id="consentTitle">AGREE TO <span>CONTINUE?</span></h2>
+            <p id="consentDescription">
+                Please read the Terms &amp; Conditions. Your choice is remembered for this browser tab session.
+            </p>
+            <a
+                class="consent-terms-link"
+                href="Terms&amp;Conditions.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                type="application/pdf"
+            >
+                READ TERMS &amp; CONDITIONS ↗
+            </a>
+            <label class="consent-check" for="termsAgreement">
+                <input id="termsAgreement" type="checkbox" required>
+                <span>I have read and agree to the Terms &amp; Conditions.</span>
+            </label>
+            <p class="consent-status" id="consentStatus" role="status" aria-live="polite"></p>
+            <div class="consent-actions">
+                <button class="consent-accept" id="consentAccept" type="button" disabled>
+                    ACCEPT &amp; ENTER
+                </button>
+                <button class="consent-decline" id="consentDecline" type="button">
+                    DECLINE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="consent-layer decline-layer"
+        id="declineScreen"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="declineTitle"
+        aria-describedby="declineDescription"
+        hidden
+    >
+        <div class="decline-card">
+            <h2 class="decline-screen-reader" id="declineTitle">Access declined</h2>
+            <p class="decline-screen-reader" id="declineDescription">
+                The portfolio remains locked after declining the Terms &amp; Conditions.
+            </p>
+            <video
+                class="decline-video"
+                id="declineVideo"
+                muted
+                playsinline
+                preload="none"
+                poster="assets/black.jpg"
+                aria-hidden="true"
+            >
+                <source src="assets/no.mp4" type="video/mp4">
+                Your browser does not support this video.
+            </video>
+            <p class="decline-fallback" id="declineFallback" hidden>
+                The decline video could not be loaded. Use EXIT to leave this page.
+            </p>
+            <p class="consent-status decline-status" id="declineStatus" role="status" aria-live="polite" hidden>
+                Your browser may block closing this tab. If it stays open, close it from your browser.
+            </p>
+            <button class="decline-exit" id="exitWebsite" type="button">
+                EXIT
+            </button>
+        </div>
+    </section>
+
+    <script src="collections.js?v=5"></script>
+    <script src="consent.js?v=15"></script>
+</body>
+</html>

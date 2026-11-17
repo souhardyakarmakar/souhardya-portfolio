@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore web development projects, interactive concepts, skills, and education from Souhardya Karmakar, a student and developer based in Kolkata, India.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Souhardya Karmakar — Portfolio">
+    <meta property="og:description" content="A portfolio of web development work, interactive concepts, skills, and education by Souhardya Karmakar.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:image:alt" content="Souhardya Karmakar portfolio mark">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#09060c">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'none'; base-uri 'self'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; upgrade-insecure-requests"
+    >
+
+    <title>Souhardya Karmakar — Portfolio</title>
+
+    <script src="consent-bootstrap.js?v=3"></script>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="stylesheet" href="consent.css?v=7">
+</head>
+
+<body class="consent-locked">
+
+    <!-- =====================================================
+         LOADING SCREEN
+    ====================================================== -->
+
+    <div class="loading-screen" id="loadingScreen">
+
+        <video
+            class="loading-video"
+            id="loadingVideo"
+            muted
+            playsinline
+            preload="none"
+            poster="assets/black.jpg"
+            aria-hidden="true"
+            tabindex="-1"
+        >
+            <source src="assets/intro.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN GAME INTERFACE
+    ====================================================== -->
+
+    <main class="game-interface" id="gameInterface">
+        <h1 class="visually-hidden">Souhardya Karmakar — Portfolio</h1>
+
+
+        <!-- =================================================
+             BACKGROUND
+        ================================================== -->
+
+        <div class="background">
+
+            <!-- Background image will be controlled with CSS -->
+
+            <div class="background-overlay"></div>
+
+            <div class="background-gradient"></div>
+
+            <div class="film-grain"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             TOP HUD
+        ================================================== -->
+
+        <header class="hud">
+
+            <div class="hud-left">
+
+                <div class="hud-logo">
+                    SOUHARDYA KARMAKAR
+                </div>
+
+                <div class="hud-status">
+                    <span class="status-dot moon" aria-hidden="true"></span>
+                    IDLE
+                </div>
+
+            </div>
+
+
+            <div class="hud-right">
+
+                <div class="hud-location">
+                    INDIA
+                </div>
+
+                <div class="hud-time" id="hudTime">
+                    00:00
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PLAYER CHARACTER
+        ================================================== -->
+
+        <section class="player-character">
+
+            <div class="character-shadow"></div>
+
+            <img
+                src="assets/character.png"
+                alt="Player character"
+                class="character-image"
+            >
+
+        </section>
+
+
+        <!-- =================================================
+             LEFT GAME MENU
+        ================================================== -->
+
+        <nav class="game-menu" id="gameMenu">
+
+            <div class="menu-header">
+
+                <span class="menu-number">
+                    MENU
+                </span>
+
+                <span class="menu-line"></span>
+
+            </div>
+
+
+            <!-- ABOUT ME -->
+
+            <button
+                class="menu-item active"
+                data-section="about"
+                aria-controls="infoDrawer"
+                aria-expanded="false"
+            >
+
+                <span class="menu-index">
+                    01
+                </span>
+
+                <span class="menu-title">
+                    ABOUT ME
+                </span>
+
+                <span class="menu-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <!-- MY SKILLS -->
+
+            <button
+                class="menu-item"
+                data-section="skills"
+                aria-controls="infoDrawer"
+                aria-expanded="false"
+            >
+
+                <span class="menu-index">
+                    02
+                </span>
+
+                <span class="menu-title">
+                    MY SKILLS
+                </span>
+
+                <span class="menu-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <!-- MY WORKS -->
+
+            <button
+                class="menu-item"
+                data-section="works"
+                aria-controls="infoDrawer"
+                aria-expanded="false"
+            >
+
+                <span class="menu-index">
+                    03
+                </span>
+
+                <span class="menu-title">
+                    MY PROJECTS
+                </span>
+
+                <span class="menu-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <!-- CERTIFICATES -->
+
+            <button
+                class="menu-item"
+                data-section="certificates"
+                aria-controls="infoDrawer"
+                aria-expanded="false"
+            >
+
+                <span class="menu-index">
+                    04
+                </span>
+
+                <span class="menu-title">
+                    CERTIFICATES
+                </span>
+
+                <span class="menu-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <!-- EDUCATION -->
+
+            <button
+                class="menu-item"
+                data-section="education"
+                aria-controls="infoDrawer"
+                aria-expanded="false"
+            >
+
+                <span class="menu-index">
+                    05
+                </span>
+
+                <span class="menu-title">
+                    EDUCATION
+                </span>
+
+                <span class="menu-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+            <!-- EXIT -->
+
+            <button
+                class="menu-item menu-exit"
+                data-section="exit"
+                aria-expanded="false"
+            >
+
+                <span class="menu-index">
+                    06
+                </span>
+
+                <span class="menu-title">
+                    EXIT
+                </span>
+
+                <span class="menu-arrow">
+                    →
+                </span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- =================================================
+             HOVER DRAWER
+        ================================================== -->
+
+        <aside
+            class="info-drawer"
+            id="infoDrawer"
+            aria-label="Section preview"
+        >
+
+            <div class="drawer-inner">
+
+                <!-- Drawer top -->
+
+                <div class="drawer-top">
+
+                    <span
+                        class="drawer-number"
+                        id="drawerNumber"
+                    >
+                        01
+                    </span>
+
+                    <span
+                        class="drawer-category"
+                        id="drawerCategory"
+                    >
+                        PLAYER PROFILE
+                    </span>
+
+                    <button
+                        class="drawer-close"
+                        id="drawerClose"
+                        aria-label="Close drawer"
+                        title="Close drawer"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <!-- Drawer content -->
+
+                <div
+                    class="drawer-content"
+                    id="drawerContent"
+                >
+
+                    <!-- JS will insert content here -->
+
+                </div>
+
+
+                <!-- Drawer footer -->
+
+                <div class="drawer-footer">
+
+                    <span>
+                        SELECT TO EXPLORE
+                    </span>
+
+                    <span class="drawer-footer-line"></span>
+
+                    <span>
+                        ENTER ↵
+                    </span>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             BOTTOM HUD
+        ================================================== -->
+
+        <aside class="kolkata-map" aria-label="Decorative Kolkata map and coordinates">
+            <div class="map-heading">
+                <span>AREA MAP</span>
+                <span class="map-status"><i aria-hidden="true"></i> KOLKATA</span>
+            </div>
+            <svg class="map-art" viewBox="0 0 220 70" role="presentation" aria-hidden="true">
+                <path d="M-8 54 46 20l39 18 42-31 45 27 60-20" />
+                <path d="m-4 9 44 31 37-20 38 29 44-37 66 40" />
+                <path d="m27 76 25-42 41-9 36 40 27-44 34-8" />
+                <path d="m4 31 66 4 25 29 51-18 46 5 35-27" />
+                <path class="map-route" d="m15 60 41-26 34 8 44-29 37 22 38-17" />
+                <circle cx="134" cy="35" r="5" />
+                <circle class="map-pulse" cx="134" cy="35" r="11" />
+            </svg>
+            <div class="map-coordinates">
+                <span><strong>22.5726° N</strong> LATITUDE</span>
+                <span><strong>88.3639° E</strong> LONGITUDE</span>
+            </div>
+        </aside>
+
+        <footer class="bottom-hud">
+
+            <div class="bottom-left">
+
+                <span class="key">
+                    ↑
+                </span>
+
+                <span class="key">
+                    ↓
+                </span>
+
+                <span>
+                    NAVIGATE
+                </span>
+
+            </div>
+
+
+            <div class="bottom-center">
+
+                <span class="scroll-line"></span>
+
+                <span>
+                    SELECT TO EXPLORE
+                </span>
+
+            </div>
+
+
+            <div class="bottom-right">
+
+                <span class="key">
+                    ENTER
+                </span>
+
+                <span>
+                    SELECT
+                </span>
+
+            </div>
+
+        </footer>
+
+
+        <!-- =================================================
+             SECTION CONTENT
+        ================================================== -->
+
+        <div class="sections-container">
+
+
+            <!-- ABOUT -->
+
+            <section
+                class="portfolio-section"
+                id="about"
+                data-section-content="about"
+            >
+
+                <div class="section-inner">
+
+                    <span class="section-label">
+                        01 / PLAYER PROFILE
+                    </span>
+
+                    <h2>
+                        ABOUT<br>
+                        <span>ME</span>
+                    </h2>
+
+                    <p>
+                        <span id="aboutBio">Souhardya is a first-year engineering student and web developer based in Kolkata, India.</span>
+                    </p>
+
+                    <a
+                        class="resume-button"
+                        href="video-preview.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch the portfolio introduction in a new tab"
+                    >
+                        <span class="resume-button-icon" aria-hidden="true">↓</span>
+                        <span class="resume-button-copy">
+                            <strong>WATCH PORTFOLIO INTRO</strong>
+                            <small>A SHORT INTRODUCTION TO MY WORK</small>
+                        </span>
+                        <span class="resume-button-arrow" aria-hidden="true">↗</span>
+                    </a>
+
+                    <div class="player-stats">
+
+                        <div class="stat">
+                            <span>NAME</span>
+                            <strong data-profile="name">SOUHARDYA KARMAKAR</strong>
+                        </div>
+                        <div class="stat">
+                            <span>ROLE</span>
+                            <strong data-profile="role">FIRST-YEAR ENGINEERING STUDENT AND WEB DEVELOPER</strong>
+                        </div>
+
+                        <div class="stat">
+                            <span>LOCATION</span>
+                            <strong data-profile="location">KOLKATA, INDIA</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SKILLS -->
+
+            <section
+                class="portfolio-section"
+                id="skills"
+                data-section-content="skills"
+            >
+
+                <div class="section-inner">
+
+                    <span class="section-label">
+                        02 / SKILL TREE
+                    </span>
+
+                    <h2>
+                        MY<br>
+                        <span>SKILLS</span>
+                    </h2>
+
+                    <p class="section-description">
+                        Technologies I work with. “Basic” marks my beginner-level SQL experience.
+                    </p>
+                    <div class="technology-list" id="technologyList" aria-label="Technologies"></div>
+
+                </div>
+
+            </section>
+
+
+            <!-- EDUCATION -->
+
+            <section
+                class="portfolio-section"
+                id="education"
+                data-section-content="education"
+            >
+
+                <div class="section-inner">
+
+                    <span class="section-label">
+                        05 / EDUCATION &amp; EXPERIENCE
+                    </span>
+
+                    <h2>
+                        MY<br>
+                        <span>EDUCATION</span>
+                    </h2>
+
+                    <p>
+                        I’m a first-year student at Netaji Subhash Engineering College in Kolkata, India.
+                    </p>
+
+                    <div class="education-facts">
+                        <div class="education-fact">
+                            <span>COLLEGE</span>
+                            <strong data-profile="college">NETAJI SUBHASH ENGINEERING COLLEGE</strong>
+                        </div>
+                        <div class="education-fact">
+                            <span>YEAR</span>
+                            <strong>FIRST YEAR</strong>
+                        </div>
+                        <div class="education-fact">
+                            <span>WEB DEVELOPMENT</span>
+                            <strong><span data-profile="webExperience">5 years</span> OF EXPERIENCE</strong>
+                        </div>
+                        <div class="education-fact">
+                            <span>SOCIAL MEDIA MANAGEMENT</span>
+                            <strong><span data-profile="socialMediaExperience">1.5 years</span> OF EXPERIENCE</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- EXIT -->
+
+            <section
+                class="portfolio-section exit-section"
+                id="exit"
+                data-section-content="exit"
+            >
+
+                <div class="exit-content">
+
+                    <span>
+                        BACK TO PORTFOLIO
+                    </span>
+
+                    <h2>
+                        LET’S KEEP<br>
+                        <span>EXPLORING.</span>
+                    </h2>
+
+                    <button
+                        class="return-button"
+                        id="returnButton"
+                    >
+                        RETURN TO MENU
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <button
+            class="section-back"
+            id="sectionBack"
+            type="button"
+            aria-hidden="true"
+        >
+            ← MAIN MENU
+        </button>
+
+        <!-- =================================================
+             EXIT CONFIRMATION
+        ================================================== -->
+
+        <div
+            class="exit-modal"
+            id="exitModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="exitModalTitle"
+        >
+
+            <div class="exit-modal-box">
+
+                <span class="modal-label">
+                    SYSTEM MESSAGE
+                </span>
+
+                <h2 id="exitModalTitle">RETURN TO MENU?</h2>
+
+                <p>
+                Leave this view and return to the main screen?
+                </p>
+
+                <div class="modal-buttons">
+
+                    <button id="exitYes">
+                        YES
+                    </button>
+
+                    <button id="exitNo">
+                        NO
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <div class="custom-cursor" id="customCursor" aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <span class="cursor-label">SELECT</span>
+    </div>
+
+    <a
+        class="terms-link"
+        href="Terms&amp;Conditions.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        type="application/pdf"
+    >
+        Terms &amp; Conditions
+    </a>
+    <div class="corner-brand">
+        <span class="corner-brand-caption">Protected by French Cat</span>
+        <a
+            class="corner-logo"
+            id="cornerLogo"
+            href="frenchcat/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open French Cat"
+            title="Open French Cat"
+        >
+            <img class="corner-logo-image" src="assets/logo.png" alt="">
+        </a>
+    </div>
+
+    <section
+        class="consent-layer"
+        id="consentGate"
+        hidden
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="consentTitle"
+        aria-describedby="consentDescription"
+    >
+        <div class="consent-card">
+            <span class="consent-kicker">PORTFOLIO ACCESS / TERMS</span>
+            <h2 id="consentTitle">AGREE TO <span>CONTINUE?</span></h2>
+            <p id="consentDescription">
+                Please read the Terms &amp; Conditions. Your choice is remembered for this browser tab session.
+            </p>
+            <a
+                class="consent-terms-link"
+                href="Terms&amp;Conditions.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                type="application/pdf"
+            >
+                READ TERMS &amp; CONDITIONS ↗
+            </a>
+            <label class="consent-check" for="termsAgreement">
+                <input id="termsAgreement" type="checkbox" required>
+                <span>I have read and agree to the Terms &amp; Conditions.</span>
+            </label>
+            <p class="consent-status" id="consentStatus" role="status" aria-live="polite"></p>
+            <div class="consent-actions">
+                <button class="consent-accept" id="consentAccept" type="button" disabled>
+                    ACCEPT &amp; ENTER
+                </button>
+                <button class="consent-decline" id="consentDecline" type="button">
+                    DECLINE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="consent-layer decline-layer"
+        id="declineScreen"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="declineTitle"
+        aria-describedby="declineDescription"
+        hidden
+    >
+        <div class="decline-card">
+            <h2 class="decline-screen-reader" id="declineTitle">Access declined</h2>
+            <p class="decline-screen-reader" id="declineDescription">
+                The portfolio remains locked after declining the Terms &amp; Conditions.
+            </p>
+            <video
+                class="decline-video"
+                id="declineVideo"
+                muted
+                playsinline
+                preload="none"
+                poster="assets/black.jpg"
+                aria-hidden="true"
+            >
+                <source src="assets/no.mp4" type="video/mp4">
+                Your browser does not support this video.
+            </video>
+            <p class="decline-fallback" id="declineFallback" hidden>
+                The decline video could not be loaded. Use EXIT to leave this page.
+            </p>
+            <p class="consent-status decline-status" id="declineStatus" role="status" aria-live="polite" hidden>
+                Your browser may block closing this tab. If it stays open, close it from your browser.
+            </p>
+            <button class="decline-exit" id="exitWebsite" type="button">
+                EXIT
+            </button>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js?v=18"></script>
+    <script src="consent.js?v=15"></script>
+
+</body>
+</html>
